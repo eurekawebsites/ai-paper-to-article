@@ -13,8 +13,6 @@ Software developed by Aster Volta.
 
 # install necessary libraries
 
-!pip install openai
-
 """--------
 
 V4
