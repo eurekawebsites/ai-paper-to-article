@@ -12,12 +12,12 @@ Software developed by Aster Volta.
 """
 
 # install necessary libraries
-pip install openai
+
 """--------
 
 V4
 """
-
+import streamlit as st
 import openai
 
 # insert your OpenAI API key here
