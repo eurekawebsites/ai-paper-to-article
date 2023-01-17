@@ -21,7 +21,8 @@ import streamlit as st
 import openai
 
 # insert your OpenAI API key here
-openai.api_key = "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"
+OPENAI_API_KEY = input('OPENAI_API_KEY')
+openai.api_key = OPENAI_API_KEY
 
 # define the prompt for the model
 name_of_article = input("Nombre del artículo científico: ")
