@@ -11,8 +11,12 @@ openai.api_key = OPENAI_API_KEY
 name_of_article = st.text_input("Nombre del artículo científico: ")
 name_of_author = st.text_input("Nombre del primer autor: ")
 
-# Define the prompt for the model
-prompt = (f"act as a scientific journalist and write an article in Spanish for the general public. Explain the results and provide numbers to back up their claims. About {name_of_article} by {name_of_author}. Lang: es")
+# Add a dropdown menu to select the language
+languages = ["English", "Español", "Français", "Deutsch", "Italiano","Nederlands","Ελληνικά","日本語","中文","Русский","Português","Polski","Svenska"]
+language = st.selectbox("Select the language for the output:", languages)
+
+# Define the prompt for the model 
+prompt = (f"act as a scientific journalist and write an article for the general public. Explain the results and provide numbers to back up their claims. About {name_of_article} by {name_of_author}. Lang: {language}")
 
 # Generate text using the GPT-3 model
 response = openai.Completion.create(
