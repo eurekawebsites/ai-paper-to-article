@@ -12,7 +12,7 @@ name_of_article = st.text_input("Nombre del artículo científico: ")
 name_of_author = st.text_input("Nombre del primer autor: ")
 
 # Define the prompt for the model
-prompt = (f"act as a scientific journalist and write an article in Spanish for the general public. Explain the results and provide numbers to back up their claims. About the scientific paper {name_of_article} by {name_of_author}. Lang: es")
+prompt = (f"act as a scientific journalist and write an article in Spanish for the general public. Explain the results and provide numbers to back up their claims. About {name_of_article} by {name_of_author}. Lang: es")
 
 # Generate text using the GPT-3 model
 response = openai.Completion.create(
