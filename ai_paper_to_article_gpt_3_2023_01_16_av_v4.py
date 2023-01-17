@@ -7,15 +7,16 @@ st.write("**✨ AI GENERATED ARTICLE FROM PUBLISHED PAPER ✨**")
 OPENAI_API_KEY = st.text_input("Insert your OpenAI API key here:")
 openai.api_key = OPENAI_API_KEY
 
-# Get the DOI of the article from the user
-doi_of_article = st.text_input("Enter the DOI of the article: ")
+# Get the info of the paper from the user
+name_of_paper = st.text_input("Enter the Title of the paper: ")
+name_of_author = st.text_input("Enter the Name of the author: ")
 
 # Add a dropdown menu to select the language
 languages = ["English", "Español", "Français", "Deutsch", "Italiano","Nederlands","Ελληνικά","日本語","中文","Русский","Português","Polski","Svenska"]
 language = st.selectbox("Select the language for the output:", languages)
 
 # Define the prompt for the model 
-prompt = (f"act as a scientific journalist and write an article for the general public. Explain the results and provide numbers to back up their claims. About the article with DOI: {doi_of_article}. Lang: {language}")
+prompt = (f"act as a scientific journalist and write an article for the general public. Explain the results and provide numbers to back up their claims. About the article: {name_of_paper} by {name_of_author}. Lang: {language}")
 
 # Generate text using the GPT-3 model
 response = openai.Completion.create(
