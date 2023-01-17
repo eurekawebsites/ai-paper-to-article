@@ -31,3 +31,4 @@ st.write(response["choices"][0]["text"])
 
 # End of the app
 st.write("**THE END ✨**")
+st.write("**Developed by Aster Volta & Ana Cristina Olvera.**")
