@@ -13,7 +13,7 @@ prompt = (f"Actúa como periodista científico y escribe un artículo en españo
 
 # Generate text using the GPT-3 model
 response = openai.Completion.create(
-    engine="text-davinci-002",
+    engine="text-davinci-003",
     prompt=prompt,
     temperature=0.3,
     max_tokens=4030,
