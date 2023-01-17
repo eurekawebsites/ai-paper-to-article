@@ -1,6 +1,8 @@
 import streamlit as st
 import openai
 
+st.write("**✨ AI GENERATED ARTICLE FROM PUBLISHED PAPER ✨**")
+
 # Get the OpenAI API key from the user
 OPENAI_API_KEY = st.text_input("Insert your OpenAI API key here:")
 openai.api_key = OPENAI_API_KEY
