@@ -16,7 +16,7 @@ languages = ["English", "Español", "Français", "Deutsch", "Italiano","Nederlan
 language = st.selectbox("Select the language for the output:", languages)
 
 # Define the prompt for the model 
-prompt = (f"act as a scientist and explain the main aspects of the research paper for the general public. Explain the results and provide numbers to back up their claims. About the article: {name_of_paper} by {name_of_author}. Lang: {language}")
+prompt = (f"act as a scientist explaining their research to a journalist that has to write an article for the general public. Explain the results and provide numbers to back up their claims. About the article: {name_of_paper}. Lang: {language}")
 
 # Generate text using the GPT-3 model
 response = openai.Completion.create(
