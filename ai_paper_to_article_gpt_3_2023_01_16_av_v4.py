@@ -9,7 +9,6 @@ openai.api_key = OPENAI_API_KEY
 
 # Get the info of the paper from the user
 name_of_paper = st.text_input("Enter the Title of the paper: ")
-name_of_author = st.text_input("Enter the Name of the author: ")
 
 # Add a dropdown menu to select the language
 languages = ["English", "Español", "Français", "Deutsch", "Italiano","Nederlands"]
