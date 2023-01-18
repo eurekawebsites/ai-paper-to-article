@@ -12,17 +12,17 @@ name_of_paper = st.text_input("Enter the Title of the paper: ")
 name_of_author = st.text_input("Enter the Name of the author: ")
 
 # Add a dropdown menu to select the language
-languages = ["English", "Español", "Français", "Deutsch", "Italiano","Nederlands","Ελληνικά","日本語","中文","Русский","Português","Polski","Svenska"]
+languages = ["English", "Español", "Français", "Deutsch", "Italiano","Nederlands"]
 language = st.selectbox("Select the language for the output:", languages)
 
 # Define the prompt for the model 
-prompt = (f"act as a scientific journalist and write an article for the general public. Explain the results and provide numbers to back up their claims. About the article: {name_of_paper} by {name_of_author}. Lang: {language}")
+prompt = (f"act as a scientist and explain the main aspects of the research paper for the general public. Explain the results and provide numbers to back up their claims. About the article: {name_of_paper} by {name_of_author}. Lang: {language}")
 
 # Generate text using the GPT-3 model
 response = openai.Completion.create(
     engine="text-davinci-003",
     prompt=prompt,
-    temperature=0.3,
+    temperature=0.5,
     max_tokens=4030,
     n = 1,
     stop=None,
