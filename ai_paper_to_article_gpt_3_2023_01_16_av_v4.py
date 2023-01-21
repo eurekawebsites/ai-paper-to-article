@@ -8,14 +8,14 @@ OPENAI_API_KEY = st.text_input("Insert your OpenAI API key here:")
 openai.api_key = OPENAI_API_KEY
 
 # Get the info of the paper from the user
-name_of_paper = st.text_input("Enter the Title of the paper: ")
+name_of_paper = st.text_input("DOI: ")
 
 # Add a dropdown menu to select the language
 languages = ["English", "Español", "Français", "Deutsch", "Italiano","Nederlands"]
 language = st.selectbox("Select the language for the output:", languages)
 
 # Define the prompt for the model 
-prompt = (f"act as a scientific journalist writing an article for the general public. Summarize the results of the research paper {name_of_paper} and provide numbers to back up the claims in the paper. Lang: {language}")
+prompt = (f"Summarize the results of the research paper {name_of_paper} and provide numbers to back up the claims in the paper. Lang: {language}")
 
 # Generate text using the GPT-3 model
 response = openai.Completion.create(
