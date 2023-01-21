@@ -16,7 +16,7 @@ languages = ["English", "Español", "Français", "Deutsch", "Italiano","Nederlan
 language = st.selectbox("Select the language for the output:", languages)
 
 # Define the prompt for the model 
-prompt = (f"Summarize the results of the research paper {name_paper}, with DOI {doi}. Lang: {language}")
+prompt = (f"Act as a journalist and summarize the results of the research paper {name_paper}, with DOI {doi}. Lang: {language}")
 
 # Generate text using the GPT-3 model
 response = openai.Completion.create(
