@@ -19,14 +19,14 @@ prompt = (f"act as a scientific journalist writing an article for the general pu
 
 # Generate text using the GPT-3 model
 response = openai.Completion.create(
-    engine="text-science-003",
+    engine="text-curie-001",
     prompt=prompt,
     temperature=0.5,
-    max_tokens=4030,
+    max_tokens=2048,
     n = 1,
     stop=None,
     top_p = 1,
-    frequency_penalty = 1,
+    frequency_penalty = 0,
     presence_penalty = 0,
 )
 
