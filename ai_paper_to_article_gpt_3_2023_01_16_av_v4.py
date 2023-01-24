@@ -15,7 +15,7 @@ OPENAI_API_KEY = st.text_input("Insert your OpenAI API key here:")
 openai.api_key = OPENAI_API_KEY
 
 # Define the prompt for the model 
-prompt = (f"What is the overview of the research, findings, implications and recommendations from the paper: {name_paper}. Lang: {language}")
+prompt = (f"Explain the research, findings, implications and recommendations from the academic paper: {name_paper}. Lang: {language}")
 
 # Generate text using the GPT-3 model
 response = openai.Completion.create(
