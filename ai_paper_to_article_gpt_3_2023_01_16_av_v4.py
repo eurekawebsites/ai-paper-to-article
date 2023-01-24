@@ -3,16 +3,16 @@ import openai
 
 st.write("**✨ AI GENERATED ARTICLE FROM PUBLISHED PAPER ✨**")
 
-# Get the OpenAI API key from the user
-OPENAI_API_KEY = st.text_input("Insert your OpenAI API key here:")
-openai.api_key = OPENAI_API_KEY
+# Get the info of the paper from the user
+name_paper = st.text_input("Name of paper: ")
 
 # Add a dropdown menu to select the language
 languages = ["English", "Español", "Français", "Deutsch", "Italiano","Nederlands"]
 language = st.selectbox("Select the language for the output:", languages)
 
-# Get the info of the paper from the user
-name_paper = st.text_input("Name of paper: ")
+# Get the OpenAI API key from the user
+OPENAI_API_KEY = st.text_input("Insert your OpenAI API key here:")
+openai.api_key = OPENAI_API_KEY
 
 # Define the prompt for the model 
 prompt = (f"What is the overview of the research, findings, implications and recommendations from the paper: {name_paper}. Lang: {language}")
