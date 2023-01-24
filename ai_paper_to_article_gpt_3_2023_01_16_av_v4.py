@@ -15,7 +15,7 @@ language = st.selectbox("Select the language for the output:", languages)
 name_paper = st.text_input("Name of paper: ")
 
 # Define the prompt for the model 
-prompt = (f"I am a journalist. Help me by pointing out the most important aspects of this paper: {name_paper}. Lang: {language}")
+prompt = (f"What is the overview of the research, findings, implications and recommendations from the paper: {name_paper}. Lang: {language}")
 
 # Generate text using the GPT-3 model
 response = openai.Completion.create(
